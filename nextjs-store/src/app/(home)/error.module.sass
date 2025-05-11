@@ -1,20 +1,52 @@
-.error
+@keyframes fadeIn
+  from
+    opacity: 0
+    transform: translateY(20px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.container
   display: flex
   flex-direction: column
   align-items: center
-  & > h1 
-    font-size: 4em
-    margin: 0
-    color: #c51111
-  & > p
-    font-size: 2em
-    margin:15px 0px 30px 0px
-    padding: 0
-    color: #fff
-  & > button
-    padding: 20px 30px
-    border:  2px 
-    border-radius: 15px
-    font-size: 1.5em
-    color: #fff
-    background-image: linear-gradient(270deg, #4f56ff, #ff4980)
+  justify-content: center
+  min-height: 100vh
+  background: linear-gradient(135deg, #1f2235, #181a29)
+  color: #fff
+  padding: 2rem
+  animation: fadeIn 0.5s ease-out
+
+.animation
+  width: 300px
+  max-width: 80%
+  margin-bottom: 2rem
+
+.title
+  font-size: 2rem
+  margin-bottom: 1.5rem
+  color: #dcdde1
+  text-align: center
+
+.button
+  display: flex
+  align-items: center
+  gap: 0.5rem
+  background: linear-gradient(90deg, #4f56ff, #ff4980)
+  padding: 12px 24px
+  border-radius: 999px
+  font-size: 1rem
+  font-weight: 600
+  color: #fff
+  border: none
+  cursor: pointer
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3)
+  transition: transform 0.2s ease, box-shadow 0.2s ease
+
+  &:hover
+    transform: scale(1.05)
+    box-shadow: 0 6px 18px rgba(255, 73, 128, 0.4)
+
+  &:focus
+    outline: none
+    box-shadow: 0 0 0 3px rgba(255, 73, 128, 0.5)
